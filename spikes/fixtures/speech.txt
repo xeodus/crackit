@@ -1,0 +1,1 @@
+The approved annual budget is twelve thousand dollars. Mira owns the launch approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects, show a capture gap and retry the connection. Do not duplicate finalized words.

@@ -1,0 +1,37 @@
+# Interview-first product plan
+
+Decision recorded 2026-10-09: Crackit's launch product is a production-grade, real-time desktop assistant for coding, technical, behavioral, and scientific interviews. The launch order is macOS, then Windows, then selected Linux distributions. A web app handles accounts, subscriptions, billing, downloads, settings, and history; it is not the capture client. A browser extension is outside the initial scope. Meeting-suite, CRM, coaching, mobile, and broad Cluely parity are no longer launch requirements. The earlier research remains a technical and competitive baseline, not the current product scope.
+
+## Product promise and measurable limits
+
+The product should help an interviewee understand a question, form a concise response, reason through code or a screen, and recover when it lacks evidence or time. "Perfect results" and "crack any interview" are aspirations, not testable product claims. Evaluate by interview type and difficulty, including incorrect, ambiguous, adversarial, and timed questions. Do not infer success from model benchmarks alone; transcription, question detection, context selection, model latency, and answer presentation all affect the result.
+
+"Stealth" means a discreet local overlay and verified exclusion from specifically tested screen-sharing paths. It does not mean invisibility to every recorder, remote-management tool, proctor, process list, or physical observer. The product must show which OS/app/share modes are supported, and should not claim universal undetectability. Treat policies of interview hosts and assessment platforms as a separate launch-market review. Visual design should meet Cluely's standard of polish while using original layouts, assets, copy, and interaction details.
+
+## First release surface
+
+**Web:** signup, login, verified email, password recovery or passkeys, checkout/subscription management, entitlement status, desktop download, device/session management, data export and deletion, and support. Keep API keys server-side for hosted plans. The website must reflect real limits on interview duration, model usage, screen context, and supported platforms.
+
+**macOS client:** signed/notarized installer and updates; clear capture/permission controls; separate mic and system-audio health; live finalized transcript; global hotkey; compact movable overlay; short answer first, expandable reasoning; optional selected-window or screen context with preview; typed question fallback; session pause/stop; usage status; readable failure states. Answer and transcript state must not silently diverge. Capture should never begin merely because an interview app opens.
+
+**Interview modes:** (1) behavioral: specific, concise response scaffolding without inventing personal experience; (2) coding: restate requirements, algorithm, complexity, edge cases, and readable code with language choice; (3) technical/scientific: assumptions, derivation, units, uncertainty, and source or context provenance. Time remaining and request type should control response length. Later additions can include resume/job-description context, preparation, mock interviews, and practice feedback, after the live core passes its gates.
+
+## Architecture and model policy
+
+Keep native capture and the UI shell separate so macOS, Windows, and Linux can share transcript, session, entitlement, and model protocols while using platform-specific capture and overlay implementations. The web service provides identity, subscriptions, metering, provider routing, and optional encrypted sync. Use short-lived desktop tokens; do not put a permanent provider credential in the app. Prefer a small, well-defined backend over a collection of services.
+
+DeepSeek V4.1 Flash (`deepseek-flash`) is a candidate for the inexpensive first-answer path, not a selected production default. The official October 2026 price is $0.30 per million cache-miss input tokens and $1.20 per million output tokens at peak, half that off-peak. A hypothetical 6,000-input/300-output-token answer would cost about $0.00216 at peak before transcription, vision, retries, hosting, payments, and support. Thinking/output tokens and image usage can change that estimate. Compare it with other current candidates on identical interview tasks and actual first-useful-answer latency; route difficult questions to a stronger model only when measured gains justify the cost. Publish no quality or price claim until an invoice-reconciled pilot supports it. [DeepSeek pricing](https://api-docs.deepseek.com/quick_start/pricing/)
+
+Reuse the existing source router, final-only context, gap detection, and budget ledger from `spikes/` where they pass new tests. The current local worker's 73-second repaired fixture is insufficient for live interviews. The known name/owner substitutions also make resume and personal-history details high-risk; ask for confirmation rather than silently rewriting them.
+
+## Delivery sequence and exit gates
+
+1. **Freeze the launch cohort and test matrix.** Choose initial macOS versions and hardware, interview languages, conferencing/share modes, and four task cohorts. Build consented and controlled recordings, screen/code fixtures, expected answers, and separate held-out cases. Decide what can be truthfully supported in the first release.
+2. **Prove the real-time path.** Feed verified audible system and mic capture into the repaired worker. Measure capture gaps, endpoint-to-answer latency, rolling-word preservation, noisy and overlapping speech, CPU, memory, and battery across 1–3-hour sessions. Test headphones, speakers, Bluetooth changes, sleep, and permission denial.
+3. **Prove the overlay claim.** Run a remote-recipient recording matrix for Zoom, Teams, Google Meet, macOS share modes, and independent capture apps. Report failures and supported combinations. A local selected-window result cannot pass this gate.
+4. **Build one end-to-end alpha.** Implement web account/entitlement flow and macOS client, then a complete coding and behavioral interview path with hotkey, audio, screen preview, model streaming, cancellation, and visible capture health. Defer visual polish until this works repeatedly.
+5. **Benchmark models and cost.** Measure first useful sentence, factual/coding correctness, error recovery, and dollars per completed interview on held-out cases. Reconcile the existing hosted benchmark halt before more paid calls; retain the agreed $10 covered-use and $2 possible-cash experiment limits. Trial credits are excluded from recurring product economics.
+6. **Harden and pilot.** Add secure storage, deletion, rate/usage limits, subscription failure handling, signed updates, crash diagnostics without raw interview content, operational monitoring, and recovery. Run a consented private beta with explicit pass/fail thresholds for each interview type and supported device/share path. Ship only supported claims.
+7. **Expand platforms.** Port the native capture and overlay layer to Windows and repeat the full matrix. Evaluate Linux distribution and display-server combinations before naming supported distros; PipeWire/portal capture and Wayland window restrictions mean Linux is not a single uniform target.
+
+The first engineering action is still verified macOS audio capture wired to the repaired finalization worker. In parallel, prepare the interview evaluation corpus and a remote screen-share test rig. These resolve the uncertainties most likely to invalidate the proposed product.

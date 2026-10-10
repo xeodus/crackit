@@ -1,0 +1,19 @@
+{
+  "dataset": "fictional-action-owners-v1",
+  "vocabulary": ["Mira", "Arjun", "Priya", "Niamh", "Siobhan", "Dev"],
+  "cases": [
+    {"id":"mira-owner","text":"Mira owns the launch approval. The deadline is Friday.","owner":"Mira","mentions":["Mira"],"split":"development"},
+    {"id":"arjun-owner","text":"Arjun owns the migration approval. Priya reviews the budget.","owner":"Arjun","mentions":["Arjun","Priya"],"split":"development"},
+    {"id":"priya-owner","text":"Priya owns the release approval. Arjun is the reviewer.","owner":"Priya","mentions":["Priya","Arjun"],"split":"development"},
+    {"id":"niamh-owner","text":"Niamh owns the customer approval. Dev reviews the contract.","owner":"Niamh","mentions":["Niamh","Dev"],"split":"development"},
+    {"id":"dev-owner","text":"Dev owns the infrastructure approval. Mira is the reviewer.","owner":"Dev","mentions":["Dev","Mira"],"split":"development"},
+    {"id":"negation","text":"Mira does not own launch approval. Priya owns launch approval.","owner":"Priya","mentions":["Mira","Priya"],"split":"development"},
+    {"id":"siobhan-owner","text":"Siobhan owns the deployment approval. The deadline is Monday.","owner":"Siobhan","mentions":["Siobhan"],"split":"held_out"},
+    {"id":"unknown-name","text":"Elena owns the budget approval. Dev reviews the migration.","owner":"Elena","mentions":["Elena","Dev"],"split":"held_out"},
+    {"id":"similar-name","text":"Meera owns the client approval. The deadline is Tuesday.","owner":"Meera","mentions":["Meera"],"split":"held_out"},
+    {"id":"correction","text":"Dev owns the launch approval. Correction, Mira owns launch approval, replacing Dev.","owner":"Mira","mentions":["Dev","Mira"],"split":"held_out"},
+    {"id":"not-an-owner","text":"Priya does not own release approval. The owner is still undecided.","owner":null,"mentions":["Priya"],"split":"held_out"},
+    {"id":"unlisted-name","text":"Omar owns the migration approval. The deadline is Thursday.","owner":"Omar","mentions":["Omar"],"split":"held_out"}
+  ],
+  "limitations": "Two voices per case produce 24 synthetic clips. Case-held-out is not voice-held-out, and these cases are not representative human accent evaluation. Vocabulary is a fixed prior roster, never derived from a reference transcript."
+}

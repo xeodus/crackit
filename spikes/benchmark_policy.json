@@ -1,0 +1,9 @@
+{
+  "usage_ceiling_usd": "10.00",
+  "cash_ceiling_usd": "2.00",
+  "verification": "User confirmed Gemini Free Tier and AssemblyAI $50 free credits in this conversation. No billing changes or automatic reloads authorized.",
+  "coverage": {
+    "gemini-3.5-flash-lite": {"kind": "free", "verified": true},
+    "assemblyai-universal-streaming-english": {"kind": "credit", "balance_usd": "50.00", "verified": true}
+  }
+}

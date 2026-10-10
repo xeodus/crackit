@@ -1,0 +1,1175 @@
+{
+  "date": "2026-10-08",
+  "environment": {
+    "os": "macOS 26.5.1",
+    "cpu_gpu": "Apple M1",
+    "architecture": "arm64",
+    "python": "3.9.6"
+  },
+  "scope": "Synthetic development fixtures and local capture diagnostic; no Cluely comparison, no representative meeting evaluation.",
+  "reports": {
+    "offline-report.json": {
+      "kind": "offline_feasibility_measurement",
+      "generated_at": "2026-10-08T12:51:39.150564+00:00",
+      "environment": {
+        "os": "macOS-26.5.1-arm64-arm-64bit",
+        "architecture": "arm64",
+        "python": "3.9.6",
+        "sqlite": "3.51.0"
+      },
+      "synthetic_meeting_hours": 3,
+      "segments": 1801,
+      "snapshot_samples": 200,
+      "replay_wall_seconds": 1.492454833,
+      "ingest_ms": {
+        "p50": 0.49945799999995266,
+        "p95": 0.6305409999999845
+      },
+      "snapshot_ms": {
+        "p50": 2.721999999999891,
+        "p95": 2.908374999999852
+      },
+      "max_context_utf8_bytes": 1696,
+      "context_byte_limit": 5400,
+      "corrected_old_evidence_retrieved": 200,
+      "db_bytes": 749568,
+      "process_max_rss_raw": 19529728,
+      "rss_unit": "bytes on macOS, KiB on Linux; process high-water mark, not isolated engine allocation",
+      "limitations": [
+        "Synthetic repeated text, not representative customer meetings",
+        "Accelerated replay, not a three-hour thermal/capture test",
+        "SQLite lexical retrieval only; no semantic model or reranker",
+        "Context sizes use a heuristic; not provider-tokenizer validation",
+        "Timing excludes capture, networking, transcription and model inference"
+      ],
+      "gates": {
+        "old_corrected_evidence_in_all_snapshots": true,
+        "context_bytes_bounded": true
+      },
+      "small_fixture_replay": {
+        "kind": "synthetic_context_replay",
+        "dataset": "crackit-synthetic-development-v1",
+        "claims": "Retrieval and context mechanics only; no LLM answers or speech recognition.",
+        "cases": [
+          {
+            "case": "budget",
+            "passed": true,
+            "retrieved_ids": [
+              "budget",
+              "owner"
+            ],
+            "context_utf8_bytes": 805,
+            "heuristic_context_tokens": 269
+          },
+          {
+            "case": "owner",
+            "passed": true,
+            "retrieved_ids": [
+              "owner",
+              "deadline"
+            ],
+            "context_utf8_bytes": 804,
+            "heuristic_context_tokens": 268
+          },
+          {
+            "case": "deadline",
+            "passed": true,
+            "retrieved_ids": [
+              "deadline",
+              "owner"
+            ],
+            "context_utf8_bytes": 809,
+            "heuristic_context_tokens": 270
+          },
+          {
+            "case": "security",
+            "passed": true,
+            "retrieved_ids": [
+              "security"
+            ],
+            "context_utf8_bytes": 806,
+            "heuristic_context_tokens": 269
+          },
+          {
+            "case": "hindi",
+            "passed": true,
+            "retrieved_ids": [
+              "hindi"
+            ],
+            "context_utf8_bytes": 806,
+            "heuristic_context_tokens": 269
+          },
+          {
+            "case": "unknown",
+            "passed": true,
+            "retrieved_ids": [],
+            "context_utf8_bytes": 813,
+            "heuristic_context_tokens": 271
+          }
+        ],
+        "passed": true,
+        "speech_accuracy_measured": false,
+        "answer_quality_measured": false
+      }
+    },
+    "local-stt-cpu.json": {
+      "kind": "controlled_local_stt",
+      "generated_at": "2026-10-08T13:03:58.581123+00:00",
+      "environment": "macOS-26.5.1-arm64-arm-64bit",
+      "backend_requested": "cpu",
+      "implementation": "whisper.cpp",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+      "model": "base.en",
+      "model_sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "audio_sha256": "82ca3db0965e371694ee7935c893bfb657e465fe515a9094ea859cc94bf5c5c3",
+      "audio_seconds": 17.552875,
+      "runs": [
+        {
+          "run": 0,
+          "wall_seconds": 0.642108583,
+          "real_time_factor": 0.036581390968715946,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 1,
+          "wall_seconds": 0.5293007080000001,
+          "real_time_factor": 0.030154644637986658,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 2,
+          "wall_seconds": 0.594160792,
+          "real_time_factor": 0.03384977059313645,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        }
+      ],
+      "wall_seconds": {
+        "p50": 0.594160792,
+        "p95": 0.642108583
+      },
+      "limitations": [
+        "Synthetic TTS only; not representative conversational accuracy",
+        "Whole-file inference includes process/model startup; not streaming latency",
+        "Requested Metal must be checked against the backend log for actual GPU use",
+        "One to three runs do not establish stable tail percentiles or thermal behavior"
+      ],
+      "causal_replay": {
+        "events": [
+          {
+            "audio_available_seconds": 2,
+            "decode_ms": 261.566,
+            "model_load_ms": 133.379,
+            "hypothesis": " The approved annual budget is 12,000.",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 4,
+            "decode_ms": 270.756,
+            "model_load_ms": 133.379,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch of",
+            "agreed_prefix": "The approved annual budget is $12,000.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 6,
+            "decode_ms": 291.305,
+            "model_load_ms": 133.379,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 8,
+            "decode_ms": 355.443,
+            "model_load_ms": 133.379,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 10,
+            "decode_ms": 360.707,
+            "model_load_ms": 133.379,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date, the system must not say",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 12,
+            "decode_ms": 254.449,
+            "model_load_ms": 133.379,
+            "hypothesis": " The",
+            "agreed_prefix": "The",
+            "agreed_prefix_revisions": 1,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 14,
+            "decode_ms": 233.571,
+            "model_load_ms": 133.379,
+            "hypothesis": " the",
+            "agreed_prefix": "the",
+            "agreed_prefix_revisions": 2,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 16,
+            "decode_ms": 244.278,
+            "model_load_ms": 133.379,
+            "hypothesis": " The",
+            "agreed_prefix": "The",
+            "agreed_prefix_revisions": 3,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 17.5529,
+            "decode_ms": 399.641,
+            "model_load_ms": 133.379,
+            "hypothesis": " The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+            "agreed_prefix": "The",
+            "agreed_prefix_revisions": 3,
+            "final_snapshot": true
+          }
+        ],
+        "step_seconds": 2,
+        "persistent_context": true,
+        "paced_in_real_time": false,
+        "interpretation": "Each prefix contains only available audio, but execution is accelerated. Agreement is provisional; later revisions are counted. Bounded to one 30-second clip; no rolling-buffer or sustained-meeting streaming claim."
+      },
+      "experiment_variant": "Initial causal decoder: timestamps disabled, default temperature fallback; revision counter also compared raw presentation. Do not compare that revision count with corrected lexical counts."
+    },
+    "local-stt-metal.json": {
+      "kind": "controlled_local_stt",
+      "generated_at": "2026-10-08T13:06:05.811891+00:00",
+      "environment": "macOS-26.5.1-arm64-arm-64bit",
+      "backend_requested": "metal",
+      "implementation": "whisper.cpp",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+      "model": "base.en",
+      "model_sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "audio_sha256": "82ca3db0965e371694ee7935c893bfb657e465fe515a9094ea859cc94bf5c5c3",
+      "audio_seconds": 17.552875,
+      "runs": [
+        {
+          "run": 0,
+          "wall_seconds": 7.849227375,
+          "real_time_factor": 0.44717616772181196,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 1,
+          "wall_seconds": 0.6151292499999998,
+          "real_time_factor": 0.03504435883010617,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 2,
+          "wall_seconds": 0.6258486249999997,
+          "real_time_factor": 0.035655049386496496,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        }
+      ],
+      "wall_seconds": {
+        "p50": 0.6258486249999997,
+        "p95": 7.849227375
+      },
+      "limitations": [
+        "Synthetic TTS only; not representative conversational accuracy",
+        "Whole-file inference includes process/model startup; not streaming latency",
+        "Requested Metal must be checked against the backend log for actual GPU use",
+        "One to three runs do not establish stable tail percentiles or thermal behavior"
+      ],
+      "causal_replay": {
+        "events": [
+          {
+            "audio_available_seconds": 2,
+            "decode_ms": 190.663,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The approved annual budget is 12,000.",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 4,
+            "decode_ms": 188.188,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch of",
+            "agreed_prefix": "The approved annual budget is $12,000.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 6,
+            "decode_ms": 236.652,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 8,
+            "decode_ms": 292.925,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 10,
+            "decode_ms": 506.824,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date, the system must not say",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 12,
+            "decode_ms": 151.483,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The",
+            "agreed_prefix": "The",
+            "agreed_prefix_revisions": 1,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 14,
+            "decode_ms": 129.787,
+            "model_load_ms": 6621.82,
+            "hypothesis": " the",
+            "agreed_prefix": "the",
+            "agreed_prefix_revisions": 2,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 16,
+            "decode_ms": 161.748,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The",
+            "agreed_prefix": "The",
+            "agreed_prefix_revisions": 3,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 17.5529,
+            "decode_ms": 598.513,
+            "model_load_ms": 6621.82,
+            "hypothesis": " The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+            "agreed_prefix": "The",
+            "agreed_prefix_revisions": 3,
+            "final_snapshot": true
+          }
+        ],
+        "step_seconds": 2,
+        "persistent_context": true,
+        "paced_in_real_time": false,
+        "interpretation": "Each prefix contains only available audio, but execution is accelerated. Agreement is provisional; later revisions are counted. Bounded to one 30-second clip; no rolling-buffer or sustained-meeting streaming claim."
+      },
+      "experiment_variant": "Initial causal decoder: timestamps disabled, default temperature fallback; revision counter also compared raw presentation. Do not compare that revision count with corrected lexical counts."
+    },
+    "local-stt-cpu-aligned.json": {
+      "kind": "controlled_local_stt",
+      "generated_at": "2026-10-08T13:06:30.713949+00:00",
+      "environment": "macOS-26.5.1-arm64-arm-64bit",
+      "backend_requested": "cpu",
+      "implementation": "whisper.cpp",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+      "model": "base.en",
+      "model_sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "audio_sha256": "82ca3db0965e371694ee7935c893bfb657e465fe515a9094ea859cc94bf5c5c3",
+      "audio_seconds": 17.552875,
+      "runs": [
+        {
+          "run": 0,
+          "wall_seconds": 0.548730084,
+          "real_time_factor": 0.03126155025886073,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 1,
+          "wall_seconds": 0.5355709169999999,
+          "real_time_factor": 0.03051186298540837,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 2,
+          "wall_seconds": 0.5416616669999998,
+          "real_time_factor": 0.030858857423641417,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        }
+      ],
+      "wall_seconds": {
+        "p50": 0.5416616669999998,
+        "p95": 0.548730084
+      },
+      "limitations": [
+        "Synthetic TTS only; not representative conversational accuracy",
+        "Whole-file inference includes process/model startup; not streaming latency",
+        "Requested Metal must be checked against the backend log for actual GPU use",
+        "One to three runs do not establish stable tail percentiles or thermal behavior"
+      ],
+      "causal_replay": {
+        "events": [
+          {
+            "audio_available_seconds": 2,
+            "decode_ms": 283.656,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is 12,000.",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 4,
+            "decode_ms": 291.284,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch of",
+            "agreed_prefix": "The approved annual budget is $12,000.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 6,
+            "decode_ms": 312.999,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is--",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 8,
+            "decode_ms": 345.377,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised a launch.",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 10,
+            "decode_ms": 363.505,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not say",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 12,
+            "decode_ms": 388.454,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects.",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 14,
+            "decode_ms": 663.138,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects. Show a capture gap in the",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 16,
+            "decode_ms": 472.277,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects. Show a capture gap and retry the connection. Do not do--",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects. Show a capture gap",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 17.5529,
+            "decode_ms": 447.545,
+            "model_load_ms": 98.6569,
+            "hypothesis": " The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+            "agreed_prefix": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": true
+          }
+        ],
+        "step_seconds": 2,
+        "persistent_context": true,
+        "paced_in_real_time": false,
+        "interpretation": "Each prefix contains only available audio, but execution is accelerated. Agreement is provisional; later revisions are counted. Bounded to one 30-second clip; no rolling-buffer or sustained-meeting streaming claim.",
+        "source_sha256": "3637233e3b42069d9f71b1717320d2b5315b48d11bc33c523753c8a0f0513d50",
+        "decoder": {
+          "timestamps": true,
+          "temperature_increment": 0,
+          "greedy_best_of": 1
+        }
+      },
+      "experiment_variant": "Aligned deterministic causal decoder; timestamp tokens enabled, temperature increment zero, best_of one; lexical agreement comparison.",
+      "provenance_note": "Decoder metadata attached after the run from the exact source used; original raw report retained locally."
+    },
+    "local-stt-metal-aligned.json": {
+      "kind": "controlled_local_stt",
+      "generated_at": "2026-10-08T13:07:17.874799+00:00",
+      "environment": "macOS-26.5.1-arm64-arm-64bit",
+      "backend_requested": "metal",
+      "implementation": "whisper.cpp",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+      "model": "base.en",
+      "model_sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "audio_sha256": "82ca3db0965e371694ee7935c893bfb657e465fe515a9094ea859cc94bf5c5c3",
+      "audio_seconds": 17.552875,
+      "runs": [
+        {
+          "run": 0,
+          "wall_seconds": 0.650471,
+          "real_time_factor": 0.037057803921010095,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 1,
+          "wall_seconds": 0.5920179999999999,
+          "real_time_factor": 0.03372769418115266,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        },
+        {
+          "run": 2,
+          "wall_seconds": 0.599764958,
+          "real_time_factor": 0.034169043988520394,
+          "transcript": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+          "word_error": {
+            "edits": 3,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.061224489795918366,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        }
+      ],
+      "wall_seconds": {
+        "p50": 0.599764958,
+        "p95": 0.650471
+      },
+      "limitations": [
+        "Synthetic TTS only; not representative conversational accuracy",
+        "Whole-file inference includes process/model startup; not streaming latency",
+        "Requested Metal must be checked against the backend log for actual GPU use",
+        "One to three runs do not establish stable tail percentiles or thermal behavior"
+      ],
+      "causal_replay": {
+        "events": [
+          {
+            "audio_available_seconds": 2,
+            "decode_ms": 166.914,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is 12,000.",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 4,
+            "decode_ms": 194.547,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch of",
+            "agreed_prefix": "The approved annual budget is $12,000.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 6,
+            "decode_ms": 245.392,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is--",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 8,
+            "decode_ms": 290.365,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised a launch.",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 10,
+            "decode_ms": 320.637,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not say",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 12,
+            "decode_ms": 357.606,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects.",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 14,
+            "decode_ms": 549.383,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects. Show a capture gap in the",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 16,
+            "decode_ms": 506.306,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects. Show a capture gap and retry the connection. Do not do--",
+            "agreed_prefix": "The approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio if the network disconnects. Show a capture gap",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 17.5529,
+            "decode_ms": 505.114,
+            "model_load_ms": 163.401,
+            "hypothesis": " The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not duplicate finalized words.",
+            "agreed_prefix": "The approved annual budget is $12,000, Mira owns the launch approval, the migration deadline is Friday, we have not promised a launch date, the system must not save raw audio, if the network disconnects, show a capture gap and retry the connection, do not",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": true
+          }
+        ],
+        "step_seconds": 2,
+        "persistent_context": true,
+        "paced_in_real_time": false,
+        "interpretation": "Each prefix contains only available audio, but execution is accelerated. Agreement is provisional; later revisions are counted. Bounded to one 30-second clip; no rolling-buffer or sustained-meeting streaming claim.",
+        "source_sha256": "3637233e3b42069d9f71b1717320d2b5315b48d11bc33c523753c8a0f0513d50",
+        "decoder": {
+          "timestamps": true,
+          "temperature_increment": 0,
+          "greedy_best_of": 1
+        }
+      },
+      "experiment_variant": "Aligned deterministic causal decoder; timestamp tokens enabled, temperature increment zero, best_of one; lexical agreement comparison.",
+      "provenance_note": "Decoder metadata attached after the run from the exact source used; original raw report retained locally."
+    },
+    "local-stt-noise.json": {
+      "kind": "controlled_local_stt",
+      "generated_at": "2026-10-08T13:08:10.105908+00:00",
+      "environment": "macOS-26.5.1-arm64-arm-64bit",
+      "backend_requested": "cpu",
+      "implementation": "whisper.cpp",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+      "model": "base.en",
+      "model_sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "audio_sha256": "6598268aa1b1b261a530388e1b8b49a424234cec439b44d3a595fac64c5b859a",
+      "audio_seconds": 17.552875,
+      "runs": [
+        {
+          "run": 0,
+          "wall_seconds": 0.5610984170000001,
+          "real_time_factor": 0.031966183146635525,
+          "transcript": "be approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised the launch date. The system must not save raw audio. If the network disconnect, show a capture gap and retry the connection. Do not duplicate finalized words.",
+          "word_error": {
+            "edits": 6,
+            "reference_words": 49,
+            "hypothesis_words": 48,
+            "wer": 0.12244897959183673,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        }
+      ],
+      "wall_seconds": {
+        "p50": 0.5610984170000001,
+        "p95": 0.5610984170000001
+      },
+      "limitations": [
+        "Synthetic TTS only; not representative conversational accuracy",
+        "Whole-file inference includes process/model startup; not streaming latency",
+        "Requested Metal must be checked against the backend log for actual GPU use",
+        "One to three runs do not establish stable tail percentiles or thermal behavior"
+      ],
+      "causal_replay": {
+        "events": [
+          {
+            "audio_available_seconds": 2,
+            "decode_ms": 262.972,
+            "model_load_ms": 85.9896,
+            "hypothesis": " The approved annual budget is 12,000.",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 4,
+            "decode_ms": 342.458,
+            "model_load_ms": 85.9896,
+            "hypothesis": " the approved annual budget is $12,000, Mira owned for launch of",
+            "agreed_prefix": "the approved annual budget is $12,000,",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 6,
+            "decode_ms": 277.234,
+            "model_load_ms": 85.9896,
+            "hypothesis": " the",
+            "agreed_prefix": "the",
+            "agreed_prefix_revisions": 1,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 8,
+            "decode_ms": 325.492,
+            "model_load_ms": 85.9896,
+            "hypothesis": " the approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday. We have not promised a launch",
+            "agreed_prefix": "the",
+            "agreed_prefix_revisions": 1,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 10,
+            "decode_ms": 233.787,
+            "model_load_ms": 85.9896,
+            "hypothesis": " the",
+            "agreed_prefix": "the",
+            "agreed_prefix_revisions": 1,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 12,
+            "decode_ms": 237.889,
+            "model_load_ms": 85.9896,
+            "hypothesis": " the",
+            "agreed_prefix": "the",
+            "agreed_prefix_revisions": 1,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 14,
+            "decode_ms": 382.631,
+            "model_load_ms": 85.9896,
+            "hypothesis": " be approved annual budget is $12,000. Mira owns the launch approval, the migration deadline is Friday, we have not promised the launch date, the system must not save raw audio, if the network disconnects. Show a capture gap and a",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 2,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 16,
+            "decode_ms": 438.093,
+            "model_load_ms": 85.9896,
+            "hypothesis": " be approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised the launch date. The system must not save raw audio. If the network disconnect, show a capture gap and retry the connection. Do not do that.",
+            "agreed_prefix": "be approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised the launch date. The system must not save raw audio. If the network",
+            "agreed_prefix_revisions": 2,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 17.5529,
+            "decode_ms": 436.53,
+            "model_load_ms": 85.9896,
+            "hypothesis": " be approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised the launch date. The system must not save raw audio. If the network disconnect, show a capture gap and retry the connection. Do not duplicate finalized words.",
+            "agreed_prefix": "be approved annual budget is $12,000. Mira owns the launch approval. The migration deadline is Friday. We have not promised the launch date. The system must not save raw audio. If the network disconnect, show a capture gap and retry the connection. Do not",
+            "agreed_prefix_revisions": 2,
+            "final_snapshot": true
+          }
+        ],
+        "step_seconds": 2,
+        "persistent_context": true,
+        "source_sha256": "3637233e3b42069d9f71b1717320d2b5315b48d11bc33c523753c8a0f0513d50",
+        "decoder": {
+          "timestamps": true,
+          "temperature_increment": 0,
+          "greedy_best_of": 1
+        },
+        "paced_in_real_time": false,
+        "interpretation": "Each prefix contains only available audio, but execution is accelerated. Agreement is provisional; later revisions are counted. Bounded to one 30-second clip; no rolling-buffer or sustained-meeting streaming claim."
+      },
+      "experiment_variant": "Aligned deterministic causal decoder; timestamp tokens enabled, temperature increment zero, best_of one; lexical agreement comparison.",
+      "provenance_note": "Decoder metadata attached after the run from the exact source used; original raw report retained locally."
+    },
+    "local-stt-tara.json": {
+      "kind": "controlled_local_stt",
+      "generated_at": "2026-10-08T13:08:43.083301+00:00",
+      "environment": "macOS-26.5.1-arm64-arm-64bit",
+      "backend_requested": "cpu",
+      "implementation": "whisper.cpp",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+      "model": "base.en",
+      "model_sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "audio_sha256": "010e22e678ab98e36cd5396fa44b1dd459bed052729a95d062cf0ce914d09756",
+      "audio_seconds": 17.2814375,
+      "runs": [
+        {
+          "run": 0,
+          "wall_seconds": 0.625833375,
+          "real_time_factor": 0.0362141965909954,
+          "transcript": "The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects, show a capture gap and retry the connection. Do not duplicate finalized words.",
+          "word_error": {
+            "edits": 7,
+            "reference_words": 49,
+            "hypothesis_words": 46,
+            "wer": 0.14285714285714285,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        }
+      ],
+      "wall_seconds": {
+        "p50": 0.625833375,
+        "p95": 0.625833375
+      },
+      "limitations": [
+        "Synthetic TTS only; not representative conversational accuracy",
+        "Whole-file inference includes process/model startup; not streaming latency",
+        "Requested Metal must be checked against the backend log for actual GPU use",
+        "One to three runs do not establish stable tail percentiles or thermal behavior"
+      ],
+      "causal_replay": {
+        "events": [
+          {
+            "audio_available_seconds": 2,
+            "decode_ms": 271.701,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is 12,000.",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 4,
+            "decode_ms": 282.07,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meet our approval.",
+            "agreed_prefix": "The approved annual budget is $12,000.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 6,
+            "decode_ms": 301.029,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meena approval, the migration deadline is Friday.",
+            "agreed_prefix": "The approved annual budget is $12,000.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 8,
+            "decode_ms": 338.974,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date.",
+            "agreed_prefix": "The approved annual budget is $12,000.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 10,
+            "decode_ms": 361.146,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save",
+            "agreed_prefix": "The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date.",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 12,
+            "decode_ms": 396.22,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects the data.",
+            "agreed_prefix": "The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 14,
+            "decode_ms": 481.308,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects, show a capture gap and retry.",
+            "agreed_prefix": "The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects,",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 16,
+            "decode_ms": 456.849,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects, show a capture gap and retry the connection. Do not duplicate.",
+            "agreed_prefix": "The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects, show a capture gap and retry",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 17.2814,
+            "decode_ms": 461.514,
+            "model_load_ms": 88.2091,
+            "hypothesis": " The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects, show a capture gap and retry the connection. Do not duplicate finalized words.",
+            "agreed_prefix": "The approved annual budget is $12,000. Meet our approval. The migration deadline is Friday. We have not promised a launch date. The system must not save raw audio. If the network disconnects, show a capture gap and retry the connection. Do not duplicate",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": true
+          }
+        ],
+        "step_seconds": 2,
+        "persistent_context": true,
+        "source_sha256": "3637233e3b42069d9f71b1717320d2b5315b48d11bc33c523753c8a0f0513d50",
+        "decoder": {
+          "timestamps": true,
+          "temperature_increment": 0,
+          "greedy_best_of": 1
+        },
+        "paced_in_real_time": false,
+        "interpretation": "Each prefix contains only available audio, but execution is accelerated. Agreement is provisional; later revisions are counted. Bounded to one 30-second clip; no rolling-buffer or sustained-meeting streaming claim."
+      },
+      "experiment_variant": "Aligned deterministic causal decoder; timestamp tokens enabled, temperature increment zero, best_of one; lexical agreement comparison.",
+      "provenance_note": "Decoder metadata attached after the run from the exact source used; original raw report retained locally."
+    },
+    "local-stt-silence.json": {
+      "kind": "controlled_local_stt",
+      "generated_at": "2026-10-08T13:06:52.652072+00:00",
+      "environment": "macOS-26.5.1-arm64-arm-64bit",
+      "backend_requested": "cpu",
+      "implementation": "whisper.cpp",
+      "commit": "d1be6fde11ac6e0407606b4e42fe72d34add8037",
+      "model": "base.en",
+      "model_sha256": "a03779c86df3323075f5e796cb2ce5029f00ec8869eee3fdfb897afe36c6d002",
+      "audio_sha256": "262d1f34f300560a4c82ba8127ddea9e1d72946f187fdbd3e8f70ee096077aec",
+      "audio_seconds": 5.0,
+      "runs": [
+        {
+          "run": 0,
+          "wall_seconds": 0.361934708,
+          "real_time_factor": 0.0723869416,
+          "transcript": "[BLANK_AUDIO]",
+          "word_error": {
+            "edits": 2,
+            "reference_words": 0,
+            "hypothesis_words": 2,
+            "wer": null,
+            "normalization": "Unicode words, lowercase; no spoken-number normalization"
+          }
+        }
+      ],
+      "wall_seconds": {
+        "p50": 0.361934708,
+        "p95": 0.361934708
+      },
+      "limitations": [
+        "Synthetic TTS only; not representative conversational accuracy",
+        "Whole-file inference includes process/model startup; not streaming latency",
+        "Requested Metal must be checked against the backend log for actual GPU use",
+        "One to three runs do not establish stable tail percentiles or thermal behavior"
+      ],
+      "causal_replay": {
+        "events": [
+          {
+            "audio_available_seconds": 2,
+            "decode_ms": 264.076,
+            "model_load_ms": 84.0068,
+            "hypothesis": " [BLANK_AUDIO]",
+            "agreed_prefix": "",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 4,
+            "decode_ms": 259.783,
+            "model_load_ms": 84.0068,
+            "hypothesis": " [BLANK_AUDIO]",
+            "agreed_prefix": "[BLANK_AUDIO]",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": false
+          },
+          {
+            "audio_available_seconds": 5,
+            "decode_ms": 256.454,
+            "model_load_ms": 84.0068,
+            "hypothesis": " [BLANK_AUDIO]",
+            "agreed_prefix": "[BLANK_AUDIO]",
+            "agreed_prefix_revisions": 0,
+            "final_snapshot": true
+          }
+        ],
+        "step_seconds": 2,
+        "persistent_context": true,
+        "paced_in_real_time": false,
+        "interpretation": "Each prefix contains only available audio, but execution is accelerated. Agreement is provisional; later revisions are counted. Bounded to one 30-second clip; no rolling-buffer or sustained-meeting streaming claim.",
+        "source_sha256": "3637233e3b42069d9f71b1717320d2b5315b48d11bc33c523753c8a0f0513d50",
+        "decoder": {
+          "timestamps": true,
+          "temperature_increment": 0,
+          "greedy_best_of": 1
+        }
+      },
+      "experiment_variant": "Aligned deterministic causal decoder; timestamp tokens enabled, temperature increment zero, best_of one; lexical agreement comparison.",
+      "provenance_note": "Decoder metadata attached after the run from the exact source used; original raw report retained locally."
+    }
+  },
+  "native_audio": {
+    "audio_uploaded": false,
+    "duration_seconds": 15.471465958282351,
+    "errors": [],
+    "interpretation": "Buffers and timestamps alone do not establish speech recognition accuracy or perfect capture.",
+    "kind": "native_capture_metrics",
+    "os": "Version 26.5.1 (Build 25F80)",
+    "raw_audio_saved": false,
+    "sources": {
+      "mic": {
+        "backwards_timestamps": 0,
+        "buffers": 748,
+        "channels": 1,
+        "gaps_over_100ms": 0,
+        "invalid_buffers": 0,
+        "last_buffer_age_ms": 59.034999925643206,
+        "peak_rms": 0,
+        "sample_rate": 16000,
+        "samples": 239360
+      },
+      "system": {
+        "backwards_timestamps": 0,
+        "buffers": 758,
+        "channels": 1,
+        "gaps_over_100ms": 0,
+        "invalid_buffers": 0,
+        "last_buffer_age_ms": 53.60987491440028,
+        "peak_rms": 0,
+        "sample_rate": 48000,
+        "samples": 727680
+      }
+    },
+    "sanitization": "Absolute local clock values omitted; remaining metrics copied from saved report.",
+    "rms_interpretation": "This report predates RMS measurement counters; zero peak_rms does not establish measured silence."
+  },
+  "native_overlay_runs": [
+    {
+      "baseline": {
+        "height": 280,
+        "magenta_ratio": 0.6704464285714286,
+        "status": "captured",
+        "width": 720
+      },
+      "interpretation": "A local selected-window test does not establish full-display or conferencing-app exclusion.",
+      "kind": "local_overlay_capture_test",
+      "os": "Version 26.5.1 (Build 25F80)",
+      "path": "ScreenCaptureKit desktopIndependentWindow / SCScreenshotManager",
+      "raw_screenshots_saved": false,
+      "remote_conferencing_tested": false,
+      "result": "marker_not_observed_in_this_path",
+      "sharing_none": {
+        "height": 140,
+        "magenta_ratio": 0,
+        "status": "captured",
+        "width": 360
+      }
+    },
+    {
+      "baseline": {
+        "height": 280,
+        "magenta_ratio": 0.6704464285714286,
+        "status": "captured",
+        "width": 720
+      },
+      "interpretation": "A local selected-window test does not establish full-display or conferencing-app exclusion.",
+      "kind": "local_overlay_capture_test",
+      "os": "Version 26.5.1 (Build 25F80)",
+      "path": "ScreenCaptureKit desktopIndependentWindow / SCScreenshotManager",
+      "raw_screenshots_saved": false,
+      "remote_conferencing_tested": false,
+      "result": "marker_not_observed_in_this_path",
+      "sharing_none": {
+        "height": 140,
+        "magenta_ratio": 0,
+        "status": "captured",
+        "width": 360
+      }
+    }
+  ],
+  "api_spending": {
+    "requests": 0,
+    "estimated_usd": "0",
+    "authorized_ceiling_usd": "2.00",
+    "reason": "Credentials not configured at report creation."
+  }
+}

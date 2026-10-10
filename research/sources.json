@@ -1,0 +1,441 @@
+{
+  "research_date": "2026-10-08",
+  "method": "Firecrawl search/scrape and built-in web fallback. Full_page means content returned, not every line independently corroborated. Search_excerpt is partial coverage. No executable product or clone was run.",
+  "source_count": 59,
+  "sources": [
+    {
+      "url": "https://cluely.com/",
+      "title": "Cluely product",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Published capabilities and transcription marketing claims"
+    },
+    {
+      "url": "https://cluely.com/pricing",
+      "title": "Cluely pricing",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Tier features; animated prices did not extract reliably"
+    },
+    {
+      "url": "https://cluely.com/blog/cluely-vs-otter",
+      "title": "Cluely versus Otter",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Official Pro price reference; vendor comparison is promotional"
+    },
+    {
+      "url": "https://cluely.com/blog/cluely-vs-granola",
+      "title": "Cluely versus Granola",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Published workflow/platform comparison; not independent competitor evidence"
+    },
+    {
+      "url": "https://docs.cluely.com/changelog",
+      "title": "Cluely changelog",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Retrieved latest entry December 18, 2025; historical stack and product changes"
+    },
+    {
+      "url": "https://docs.cluely.com/quickstart",
+      "title": "Cluely quickstart",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Published platform requirements; older capture behavior needs verification"
+    },
+    {
+      "url": "https://docs.cluely.com/debugging/audio",
+      "title": "Audio troubleshooting",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Mic/system capture, WebSockets, provider connection and health failure modes"
+    },
+    {
+      "url": "https://docs.cluely.com/debugging/calendar",
+      "title": "Calendar troubleshooting",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Published Google-only calendar workflow"
+    },
+    {
+      "url": "https://docs.cluely.com/feature/liveinsights",
+      "title": "Live assistance",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Older interface and compatibility qualifications"
+    },
+    {
+      "url": "https://docs.cluely.com/feature/postcall",
+      "title": "Post-call workflow",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Notes, actions, sharing, export and session continuation"
+    },
+    {
+      "url": "https://docs.cluely.com/feature/precall",
+      "title": "Pre-call workflow",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Calendar attendee preparation and context"
+    },
+    {
+      "url": "https://docs.cluely.com/feature/settings",
+      "title": "Settings",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Successful retry after Firecrawl rate limit"
+    },
+    {
+      "url": "https://docs.cluely.com/feature/coaching",
+      "title": "Coaching",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Successful retry after Firecrawl rate limit"
+    },
+    {
+      "url": "https://docs.cluely.com/feature/undetectability",
+      "title": "Screen-share exclusion",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "OS behavior claim; not independently tested"
+    },
+    {
+      "url": "https://docs.cluely.com/feature/limitations",
+      "title": "Limitations",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Contains stale mobile statement contradicted by later changelog"
+    },
+    {
+      "url": "https://docs.cluely.com/enterprise/knowledgebase",
+      "title": "Enterprise knowledge",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "RAG, files, permissions, team-assisted live sources"
+    },
+    {
+      "url": "https://docs.cluely.com/enterprise/integrations",
+      "title": "Enterprise integrations",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Merge.dev, CRM/ATS read/write synchronization"
+    },
+    {
+      "url": "https://docs.cluely.com/enterprise/customizationsuite",
+      "title": "Enterprise customization",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Prompts, knowledge, onboarding, analytics"
+    },
+    {
+      "url": "https://docs.cluely.com/enterprise/rolemanagement",
+      "title": "Enterprise role management",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Prompt assignment and permission concepts"
+    },
+    {
+      "url": "https://cluely.com/privacy-policy",
+      "title": "Privacy policy",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "No-training and encryption statements; policy/terms discrepancy"
+    },
+    {
+      "url": "https://cluely.com/terms",
+      "title": "Consumer terms",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Training authorization and competitor-access restrictions; actual practice unknown"
+    },
+    {
+      "url": "https://new.cluely.com/subprocessors",
+      "title": "Subprocessor disclosure",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Alternate Cluely subdomain; vendor list does not establish active workload"
+    },
+    {
+      "url": "https://www.recall.ai/pricing",
+      "title": "Recall pricing",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Capture, STT and storage charges"
+    },
+    {
+      "url": "https://docs.recall.ai/docs/desktop-sdk",
+      "title": "Recall desktop SDK",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Public SDK implementation reference"
+    },
+    {
+      "url": "https://docs.recall.ai/docs/recallai-transcription",
+      "title": "Recall transcription",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Built-in STT pricing and configuration"
+    },
+    {
+      "url": "https://www.assemblyai.com/pricing",
+      "title": "AssemblyAI pricing",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Current streaming/batch price references"
+    },
+    {
+      "url": "https://www.assemblyai.com/products/streaming-speech-to-text",
+      "title": "AssemblyAI realtime product",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Candidate prices/languages and vendor latency claims"
+    },
+    {
+      "url": "https://deepgram.com/pricing",
+      "title": "Deepgram pricing",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Promotional versus regular streaming rates"
+    },
+    {
+      "url": "https://developers.deepgram.com/docs/multichannel",
+      "title": "Deepgram multichannel",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Independent channel transcripts; billing not established by this page"
+    },
+    {
+      "url": "https://developers.deepgram.com/docs/understand-endpointing-interim-results",
+      "title": "Deepgram interim/endpointing",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Final segment versus speech-final semantics"
+    },
+    {
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "title": "Gemini pricing",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Standard text/image price reference and paid/free data use"
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "title": "Claude pricing",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Model/cache prices; Sonnet 4.6 used as explicit calculator reference"
+    },
+    {
+      "url": "https://www.merge.dev/pricing/unified",
+      "title": "Merge pricing",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Linked-account commercial costs"
+    },
+    {
+      "url": "https://developer.apple.com/documentation/screencapturekit",
+      "title": "Apple ScreenCaptureKit",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Supported capture framework"
+    },
+    {
+      "url": "https://developer.apple.com/videos/play/wwdc2024/10088/",
+      "title": "Apple capture additions",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Microphone output with system audio"
+    },
+    {
+      "url": "https://developer.apple.com/documentation/vision/vnrecognizetextrequest",
+      "title": "Apple OCR",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "On-device text recognition API"
+    },
+    {
+      "url": "https://learn.microsoft.com/windows/win32/coreaudio/loopback-recording",
+      "title": "Microsoft WASAPI loopback",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "System output capture behavior"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowdisplayaffinity",
+      "title": "Microsoft window display affinity",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Capture exclusion scope and compatibility"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/api/browser-window",
+      "title": "Electron BrowserWindow",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "macOS capture-protection limitation"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/api/desktop-capturer",
+      "title": "Electron desktop capture",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Loopback and macOS capture caveats"
+    },
+    {
+      "url": "https://www.electronjs.org/docs/latest/tutorial/security",
+      "title": "Electron security",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Renderer isolation, sandbox and IPC boundaries"
+    },
+    {
+      "url": "https://v2.tauri.app/plugin/global-shortcut/",
+      "title": "Tauri shortcuts",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Global shortcut plugin"
+    },
+    {
+      "url": "https://v2.tauri.app/learn/sidecar-nodejs/",
+      "title": "Tauri sidecars",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Packaged sidecar capability"
+    },
+    {
+      "url": "https://developers.google.com/workspace/calendar/api/guides/push",
+      "title": "Google Calendar push",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Watch renewal, payload and delivery limitations"
+    },
+    {
+      "url": "https://developers.google.com/workspace/calendar/api/guides/sync",
+      "title": "Google Calendar sync",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Incremental tokens and invalidation"
+    },
+    {
+      "url": "https://learn.microsoft.com/graph/delta-query-overview",
+      "title": "Microsoft Graph delta",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Delta tracking and change notifications"
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/graph/delta-query-events",
+      "title": "Microsoft calendar delta",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Calendar/date-range synchronization"
+    },
+    {
+      "url": "https://github.com/pgvector/pgvector",
+      "title": "pgvector",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Vector search filtering and multitenancy"
+    },
+    {
+      "url": "https://github.com/ggml-org/whisper.cpp",
+      "title": "whisper.cpp",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Local C/C++ inference and microphone example"
+    },
+    {
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "title": "faster-whisper",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Implementation and throughput benchmark reference"
+    },
+    {
+      "url": "https://github.com/ufal/whisper_streaming",
+      "title": "WhisperStreaming",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Streaming stability and successor discussion"
+    },
+    {
+      "url": "https://github.com/ufal/SimulStreaming",
+      "title": "SimulStreaming",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Streaming successor implementation"
+    },
+    {
+      "url": "https://github.com/snakers4/silero-vad",
+      "title": "Silero VAD",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Voice activity detection and MIT license"
+    },
+    {
+      "url": "https://www.granola.ai/pricing",
+      "title": "Granola pricing/features",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Current independent competitor feature and price evidence"
+    },
+    {
+      "url": "https://otter.ai/",
+      "title": "Otter product",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Live chat/transcript and post-call workflows"
+    },
+    {
+      "url": "https://otter.ai/pricing",
+      "title": "Otter pricing",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Ambiguous promotional/regular extracted prices; not relied on for detailed comparison"
+    },
+    {
+      "url": "https://github.com/TechyCSR/OpenCluely",
+      "title": "OpenCluely upstream",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Public reference; not run or code-audited"
+    },
+    {
+      "url": "https://github.com/TechyCSR/OpenCluely/blob/main/LICENSE",
+      "title": "OpenCluely license",
+      "access": "full_page",
+      "accessed_on": "2026-10-08",
+      "notes": "Apache-2.0 file differs from README MIT claim"
+    },
+    {
+      "url": "https://github.com/gouthamravella/cheatingdaddy_glass",
+      "title": "Glass-related fork",
+      "access": "search_excerpt",
+      "accessed_on": "2026-10-08",
+      "notes": "Reference only; provenance/license not established"
+    }
+  ],
+  "failed_or_excluded": [
+    {
+      "url": "https://cluely.com/privacy",
+      "reason": "404; correct policy located at /privacy-policy"
+    },
+    {
+      "url": "https://github.com/pickle-com/glass",
+      "reason": "404; upstream not established"
+    },
+    {
+      "url": "https://github.com/gouthamravella/cheatingdaddy_glass/blob/main/LICENSE",
+      "reason": "Fetch failed; no licensing conclusion"
+    },
+    {
+      "description": "Several broad Firecrawl searches hit 429; excluded as evidence. Settings/coaching scrape failures were retried successfully."
+    },
+    {
+      "url": "https://mishhy.com/blog/building-cluely-real-time-meeting-intelligence",
+      "reason": "Unverified affiliation/implementation; excluded as evidence of Cluely internals"
+    }
+  ]
+}

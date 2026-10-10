@@ -1,0 +1,2 @@
+# Optional cloud STT transport only; core and native probes need no third-party packages.
+websockets==15.0.1
